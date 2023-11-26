@@ -1,18 +1,18 @@
 import numpy as np
 
-no_darts = 1000
-point = 0
+darts = 1000
 i = 0
+win = 0
 
-for i in range(no_darts):
+for i in range(darts):
 
     x = np.random.random()
     y = np.random.random()
     z = (x**2 + y**2)**0.5
 
     if z <= 1:
-        point += 1
+        win +=1
 
-pi = 4 * point / no_darts
+value = 4 * win / darts
 
-print('PI ={}'.format(pi))
+print('PI ={}'.format(value))
